@@ -6,10 +6,12 @@ An interactive cloud animation system with theme-aware backgrounds for React app
 
 - 🌤️ **Animated Clouds** - 5 clouds with continuous marquee movement
 - 🎨 **Theme System** - Dark, Light, and Dusk themes with automatic time-based switching
+- 🌍 **Cloud Toggle Button** - Bengali-inspired "আকাশ" (sky) toggle with interactive animations
 - ⚡ **Performance Optimized** - GPU-accelerated animations using CSS transforms
 - 🎯 **TypeScript Support** - Full type definitions included
 - 📱 **Responsive** - Works on all screen sizes
 - 🎨 **Customizable** - Configure colors, speeds, and cloud images
+- ♿ **Accessible** - Full keyboard navigation and screen reader support
 
 ## Installation
 
@@ -22,7 +24,7 @@ yarn add react-cloud-animation
 ## Quick Start
 
 ```tsx
-import { ThemeProvider, CloudAnimation, ThemeToggle } from 'react-cloud-animation';
+import { ThemeProvider, CloudAnimation, ThemeToggle, CloudToggleButton } from 'react-cloud-animation';
 import 'react-cloud-animation/dist/style.css';
 
 function App() {
@@ -31,6 +33,7 @@ function App() {
       <div className="app">
         <CloudAnimation />
         <ThemeToggle />
+        <CloudToggleButton />
         {/* Your content */}
       </div>
     </ThemeProvider>
@@ -81,6 +84,31 @@ Props:
 ```tsx
 <ThemeToggle className="my-custom-class" size={6} />
 ```
+
+#### `<CloudToggleButton>`
+Interactive Bengali text button that toggles cloud animations. Displays "আকাশ" (meaning "sky" in Bengali).
+
+Props:
+- `className?: string` - Additional CSS classes
+- `showTooltip?: boolean` - Show/hide tooltip on hover (default: true)
+- `tooltipText?: string` - Custom tooltip text
+- `size?: 'sm' | 'md' | 'lg'` - Button size (default: 'md')
+- `variant?: 'default' | 'minimal'` - Animation style (default: 'default')
+
+```tsx
+<CloudToggleButton 
+  size="lg"
+  variant="minimal"
+  tooltipText="Click to toggle clouds!"
+  className="my-custom-class"
+/>
+```
+
+**Features:**
+- **Theme-Aware**: Adapts colors based on current theme
+- **Interactive Animations**: Glow effect with bouncing pointer indicator
+- **Accessibility**: Full keyboard navigation and ARIA labels
+- **Responsive**: Mobile-optimized design
 
 ### Hooks
 
@@ -159,6 +187,8 @@ The package provides several CSS classes for styling:
 - `.animate-subtle-glow` - Subtle glow animation
 - `.animate-prominent-glow` - Prominent glow animation
 - `.theme-toggle-btn` - Theme toggle button
+- `.cloud-toggle-glow` - Cloud toggle button glow animation
+- `.cloud-toggle-indicator` - Cloud toggle button with pointer indicator
 
 ## Z-Index Structure
 

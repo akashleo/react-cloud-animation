@@ -201,3 +201,98 @@
 .dusk .animate-prominent-glow {
   color: #9370DB;
 }
+
+/* Cloud Toggle Button Animations */
+@keyframes cloudToggleGlow {
+  0%, 100% { 
+    text-shadow: 0 0 8px rgba(135, 206, 235, 0.6), 0 0 16px rgba(135, 206, 235, 0.3);
+    transform: scale(1);
+  }
+  50% { 
+    text-shadow: 0 0 16px rgba(135, 206, 235, 0.9), 0 0 32px rgba(135, 206, 235, 0.5);
+    transform: scale(1.1);
+  }
+}
+
+@keyframes bounceIndicator {
+  0%, 20%, 50%, 80%, 100% {
+    transform: translateY(0) scale(1);
+  }
+  40% {
+    transform: translateY(-8px) scale(1.1);
+  }
+  60% {
+    transform: translateY(-4px) scale(1.05);
+  }
+}
+
+@keyframes bounceArrowDelayed {
+  0%, 20%, 50%, 80%, 100% {
+    transform: translateY(0);
+    opacity: 0.8;
+  }
+  40% {
+    transform: translateY(-6px);
+    opacity: 1;
+  }
+  60% {
+    transform: translateY(-3px);
+    opacity: 0.9;
+  }
+}
+
+.cloud-toggle-glow {
+  animation: cloudToggleGlow 2.5s ease-in-out infinite;
+  cursor: pointer;
+  position: relative;
+}
+
+.cloud-toggle-indicator {
+  position: relative;
+}
+
+.cloud-toggle-indicator::after {
+  content: '👆';
+  position: absolute;
+  top: -2rem;
+  right: -1.5rem;
+  font-size: 1rem;
+  animation-delay: 1s;
+  animation: bounceArrowDelayed 1.5s ease-in-out infinite;
+  pointer-events: none;
+  z-index: 100;
+}
+
+/* Theme-specific cloud toggle colors */
+.light .cloud-toggle-glow {
+  color: #4682B4;
+}
+
+.light .cloud-toggle-glow:hover {
+  color: #87CEEB;
+}
+
+.dark .cloud-toggle-glow {
+  color: #87CEEB;
+}
+
+.dark .cloud-toggle-glow:hover {
+  color: #B0E0E6;
+}
+
+.dusk .cloud-toggle-glow {
+  color: #9370DB;
+}
+
+.dusk .cloud-toggle-glow:hover {
+  color: #d2c4f4;
+}
+
+/* Responsive adjustments for cloud toggle */
+@media (max-width: 768px) {
+  .cloud-toggle-indicator::after {
+    font-size: 0.875rem;
+    top: -1.75rem;
+    right: -1.25rem;
+  }
+}

@@ -26,3 +26,11 @@ export interface ThemeToggleProps {
   className?: string;
   size?: number;
 }
+
+export interface CloudToggleButtonProps {
+  className?: string;
+  showTooltip?: boolean;
+  tooltipText?: string;
+  size?: 'sm' | 'md' | 'lg';
+  variant?: 'default' | 'minimal';
+}
