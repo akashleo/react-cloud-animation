@@ -1,0 +1,47 @@
+{
+  "name": "react-cloud-animation",
+  "version": "0.0.1",
+  "description": "Interactive cloud animation system with theme-aware backgrounds for React applications",
+  "main": "dist/index.js",
+  "module": "dist/index.esm.js",
+  "types": "dist/index.d.ts",
+  "files": [
+    "dist",
+    "README.md"
+  ],
+  "scripts": {
+    "build": "vite build",
+    "dev": "vite build --watch",
+    "typecheck": "tsc --noEmit"
+  },
+  "peerDependencies": {
+    "react": "^18.0.0",
+    "react-dom": "^18.0.0"
+  },
+  "dependencies": {
+    "lucide-react": "^0.344.0"
+  },
+  "devDependencies": {
+    "@types/react": "^18.3.5",
+    "@types/react-dom": "^18.3.0",
+    "@vitejs/plugin-react": "^4.3.1",
+    "typescript": "^5.5.3",
+    "vite": "^5.4.2",
+    "vite-plugin-dts": "^3.0.0"
+  },
+  "keywords": [
+    "react",
+    "animation",
+    "cloud",
+    "theme",
+    "background",
+    "marquee",
+    "typescript"
+  ],
+  "author": "Akash Ghosh",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/akashleo/react-cloud-animation.git"
+  }
+}
