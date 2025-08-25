@@ -1,6 +1,6 @@
 {
   "name": "react-cloud-animation",
-  "version": "0.0.2",
+  "version": "0.0.4",
   "description": "Interactive cloud animation system with theme-aware backgrounds for React applications",
   "main": "dist/index.js",
   "module": "dist/index.esm.js",

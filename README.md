@@ -6,7 +6,7 @@ An interactive cloud animation system with theme-aware backgrounds for React app
 
 - 🌤️ **Animated Clouds** - 5 clouds with continuous marquee movement
 - 🎨 **Theme System** - Dark, Light, and Dusk themes with automatic time-based switching
-- 🌍 **Cloud Toggle Button** - Bengali-inspired "আকাশ" (sky) toggle with interactive animations
+- 🌍 **Cloud Toggle Button** - Icon-based toggle button with Cloud/CloudOff icons
 - ⚡ **Performance Optimized** - GPU-accelerated animations using CSS transforms
 - 🎯 **TypeScript Support** - Full type definitions included
 - 📱 **Responsive** - Works on all screen sizes
@@ -86,29 +86,20 @@ Props:
 ```
 
 #### `<CloudToggleButton>`
-Interactive Bengali text button that toggles cloud animations. Displays "আকাশ" (meaning "sky" in Bengali).
+Icon-based button that toggles cloud animations. Shows Cloud icon when clouds are active, CloudOff when inactive.
 
 Props:
 - `className?: string` - Additional CSS classes
-- `showTooltip?: boolean` - Show/hide tooltip on hover (default: true)
-- `tooltipText?: string` - Custom tooltip text
-- `size?: 'sm' | 'md' | 'lg'` - Button size (default: 'md')
-- `variant?: 'default' | 'minimal'` - Animation style (default: 'default')
 
 ```tsx
-<CloudToggleButton 
-  size="lg"
-  variant="minimal"
-  tooltipText="Click to toggle clouds!"
-  className="my-custom-class"
-/>
+<CloudToggleButton className="my-custom-class" />
 ```
 
 **Features:**
-- **Theme-Aware**: Adapts colors based on current theme
-- **Interactive Animations**: Glow effect with bouncing pointer indicator
-- **Accessibility**: Full keyboard navigation and ARIA labels
-- **Responsive**: Mobile-optimized design
+- **Theme-Aware**: Adapts colors based on current theme (light/dark mode)
+- **Icon Toggle**: Cloud icon when active, CloudOff when inactive
+- **Accessibility**: Includes title attribute for screen readers
+- **Hover Effects**: Smooth color transitions on hover
 
 ### Hooks
 
@@ -187,8 +178,6 @@ The package provides several CSS classes for styling:
 - `.animate-subtle-glow` - Subtle glow animation
 - `.animate-prominent-glow` - Prominent glow animation
 - `.theme-toggle-btn` - Theme toggle button
-- `.cloud-toggle-glow` - Cloud toggle button glow animation
-- `.cloud-toggle-indicator` - Cloud toggle button with pointer indicator
 
 ## Z-Index Structure
 
