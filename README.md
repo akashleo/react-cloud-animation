@@ -2,6 +2,8 @@
 
 An interactive cloud animation system with theme-aware backgrounds for React applications. Features smooth marquee-style cloud movements, automatic time-based theming, and customizable animations.
 
+website: https://cloudanimation.akashghosh.xyz/
+
 ## Features
 
 - 🌤️ **Animated Clouds** - 5 clouds with continuous marquee movement
@@ -204,4 +206,4 @@ Contributions are welcome! Please feel free to submit a Pull Request.
 
 ## Credits
 
-Created with ❤️ by the React Cloud Animation team.
+Created with ❤️ by Akash Ghosh.
